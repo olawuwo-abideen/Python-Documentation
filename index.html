@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Python Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know"
+          >What you should already know</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" href="#Python">Python</a>
+      </li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+      </li>
+      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+      <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li>
+        <a class="nav-link" href="#if...else_statement">if...else statement</a>
+      </li>
+      <li><a class="nav-link" href="#while_statement">while statement</a></li>
+      <li>
+        <a class="nav-link" href="#Function_declarations"
+          >Function declarations</a>
+      </li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+            Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+
+            It is used for:
+            <ul>
+           <li> Web development (server-side)</li>
+           <li>Software development</li>
+           <li>Mathematics</li>
+          <li>System scripting</li>
+        </ul>
+        <ul>
+           <p> What can Python do? </p>
+          <ul>
+          <li>Python can be used on a server to create web applications.</li>
+          <li>Python can be used alongside software to create workflows.</li>
+          <li>Python can connect to database systems. It can also read and modify files.</li>
+          <li>Python can be used to handle big data and perform complex mathematics.</li>
+          <li>Python can be used for rapid prototyping, or for production-ready software development.</li>
+        </ul>
+        </p>
+      
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <ul>
+            <ul>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</ul>
+             <ul>Python has a simple syntax similar to the English language.</ul>
+             <ul>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</ul>
+             <ul>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. 
+               This means that prototyping can be very quick.</ul>
+             <ul>Python can be treated in a procedural way, an object-oriented way or a functional way.</ul>
+             </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Python">
+      <header>Python and Other Languages</header>
+      <article>
+        <h3>Python Vs Other Language</h3>
+<p>Python Syntax compared to other programming languages</p>
+<ul>
+<li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+<li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. </li>
+<li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. 
+  Other programming languages often use curly-brackets for this purpose. </li>
+</ul>
+<h3>Difference between C and Python</h3> 
+<p> The most significant differences between C and Python programming are as follows.</p>
+<ul>
+
+<li>C is a procedural language, while Python is an object-oriented language.
+<li>C is a compiled language, while Python is an interpreted language. .</li>
+<li>C is a static-type language, and the data type of each variable is defined prior to the execution of the program. 
+  On the other hand, Python is a dynamically typed language and the data type of each variable is determined at runtime. .</li>
+<li>Due to static typing and being a compiled language, Programs written in C are very fast. 
+  Whereas Python is an interpreted and dynamically typed language, 
+  due to which python programs are very slow compared to programs written in C. .</li>
+<li>C has a concept of simple variables as well as pointers. Whereas Python has no concept of pointers, 
+  and each variable in Python is a reference to an object.</li>
+</ul>
+<h3>Difference between Python and Java</h3>
+     <p> The most significant differences between programming in python and java are as follows.</p>
+<ul>
+<li>Java is a statically typed language, while Python is a dynamically typed language.</li>
+<li>Java programs are compiled into bytecodes, and then they are executed in JVMs, 
+  while python programs are directly interpreted by the interpreter. .</li>
+<li>Java has a complex syntax when compared to Python, while python programs have very good readability. .</li>
+<li>In Java, curly braces are used to define blocks of code, while Python uses indentation to define blocks of code. .</li>
+<li>Java programs are first compiled and then interpreted, while Python is a completely interpreted language. .</li>
+</ul>
+
+      </article>
+    </section>
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        To get started with writing Python, open the Scratchpad and write your
+        first "Hello world" Python code:
+        <code
+          > print('Hello World!')
+          >>> Output Hello World!
+        </code>
+  
+        Select the code in the pad and hit Ctrl+R to watch it unfold in your
+        browser!
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>
+        A Python variable is a reserved memory location to store values. 
+        In other words, a variable in a python program gives data to the computer for processing. 
+        Every value in Python has a datatype. 
+        Different data types in Python are Numbers, List, Tuple, Strings, Dictionary, etc.
+      </p>
+      <p>
+        Python is not “statically typed”. We do not need to declare variables before using them or declare their type. 
+        A variable is created the moment we first assign a value to it. 
+        A variable is a name given to a memory location. It is the basic unit of storage in a program.
+        </p>
+
+        <p>The value stored in a variable can be changed during program execution.
+        A variable is only a name given to a memory location, 
+        all the operations done on the variable effects that memory location.</p>
+        <h4>Rules for creating variables in Python:</h4>
+        <ul>
+       <li> A variable name must start with a letter or the underscore character.</li>
+       <li> A variable name cannot start with a number.</li>
+        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).</li>
+        <li> Variable names are case-sensitive (name, Name and NAME are three different variables).</li>
+          <li>The reserved words(keywords) cannot be used naming the variable.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
+      <article>
+        <p>Python has no command for declaring a variable. A variable is created when some value is assigned to it.</p>
+        <h4>How to declare a variable in Python?</h4>
+        <ul>
+        <li>Just name the variable.</li>
+        <li> Assign the required value to it.</li>
+          <li> The data type of the variable will be automatically determined from the value assigned, we need not define it explicitly.</li>
+        </ul>
+        <h4>Python Variable Types</h4>
+          <p>Every value in Python has a datatype. 
+          Different data types in Python are Numbers, List, Tuple, Strings, Dictionary, etc. 
+          Variables in Python can be declared by any name or even alphabets like a, aa, abc, etc.</p>
+        
+      </article>
+    </section>
+    <section class="main-section" id="Variable_scope">
+      <header>Variable scope</header>
+      <article>
+        <p>
+          The scope of a variable refers to the context in which that variable is visible/accessible to the Python interpreter.
+        </p>
+  
+        <p>
+          In Python, variables are the containers for storing data values. 
+          They are reference, or pointers, to an object in memory which means that whenever a variable is assigned to an instance, 
+          it gets mapped to that instance. 
+          Unlike other languages like C/C++/JAVA, Python is not “statically typed”. 
+          We do not need to declare variables before using them or declare their type. 
+          A variable is created the moment we first assign a value to it.
+        </p>
+        <code>x = 7 
+              y = 8
+              z = x + y
+              print(z) 
+              >>> 15</code>
+        <p>
+          The scope of a variable in python is that part of the code where it is visible. 
+          Actually, to refer to it, you don't need to use any prefixes then.
+
+          Let's take an example, but before let's revise python Syntax.
+
+          <code>>>> b = 8
+            >>> def func():
+              a = 7
+              print(a)
+              print(b) 
+              >>> func() 
+            </code>            
+           <h4>Output</h4>
+            <code>
+            >>> 7
+            >>> 8
+            </code>
+      </article>
+    </section>
+    <section class="main-section" id="Global_variables">
+      <header>Global variables</header>
+      <article>
+        <p>A variable created in the main body of the Python code is a global variable and belongs to the global scope.</p>
+          <p>Global variables are available from within any scope, global and local.</p>
+  
+        
+         <h4> Global variables</h4>
+          <p>Global variables are the ones that are defined and declared outside any function and are not specified to any function.
+             They can be used by any part of the program.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <article>
+        <p>
+          A constant is a type of variable whose value cannot be changed.
+        </p>
+        <p>
+          <p>Python Constants are basically those variables whose values do not change during the program implementation.</p>
+            <ul>
+          <li>Python is basically a programming language that makes complex programs easier to 
+            understand and implement also; it is used in commercial applications.</li>
+          <li>These constants are basically assigned to a document.</li>
+          <li>The document consists of variables and functions, which are therefore recorded in the main file.</li>
+          <li>The constants are thus written inside this main file in 
+            capital letters and underscores by isolating the words.</li>
+        </ul>
+          <h4>Assigning and Declaring Python Constants</h4>
+          <ul>
+            <li>The first and foremost thing to remember while declaring 
+              Python Constants is that the constant values should always be declared in capital letters/uppercase.</li>
+              <li>The values declared should not be abbreviations of the names, and it has to be declared completely.</li>
+        </ul>
+          <p>Example:</p>
+          
+          <code>
+          PI = 3.14
+          GRAVITY = 9.8
+        </code>
+         
+      </article>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+        <h4>Basic Data Types in Python</h4>
+<p>A data type is a characteristic that tells the compiler (or interpreter) how a
+programmer intends to use the data. There are two general categories of data types, 
+differing whether the data is changeable after definition:
+</p>
+<ul>
+
+<li>1. Immutable. Data types that are not changeable after assignment.</li>
+
+<li>2. Mutable. Data types that are changeable after assignment.</li>
+</ul>
+<h4>Numeric Type</h4>
+<p>Numeric type objects represent number values. They are divided into three subgroups:</p>
+<ul>
+<li>Integers</li>
+<li>Floating Point Numbers</li>
+<li>Complex Numbers</li>
+</ul>
+<h4>Sequence Type</h4>
+<p>Sequence types help represent sequential data stored into a single variable. There are three types of sequences used in Python:</p>
+<ul>
+<li>String</li>
+<li>List</li>
+<li>Tuple</li>
+</ul>
+<h4>Boolean Type</h4>
+<p>Boolean data types belong to the bool class and determine the truth value of expressions. 
+  Objects of the Boolean type evaluate either to <b>True </b> or <b>False</b>  </p>
+      
+<h4>Set Type </h4>
+<p>The Set data type is part of the set class. It stores data collections into a single variable. 
+  Sets are unordered and do not allow access to individual elements through indexing. 
+Any duplicate values are ignored.</p>
+<h4>Mapping Type</h4>
+<p>Mapping data type is represented by a Python dictionary. 
+A dictionary is a collection of data with key and value pairs belonging to the dict class.</p>
+
+</article>
+
+
+    </section>
+    <section class="main-section" id="if...else_statement">
+      <header>if...else statement</header>
+      <article>
+        <p>An if else Python statement evaluates whether an expression is true or false. 
+        If a condition is true, the “if” statement executes. Otherwise, the “else” statement executes. 
+        Python if else statements help coders control the flow of their programs.</p>
+        <p>An else statement can be combined with an if statement. 
+          An else statement contains the block of code that executes 
+          if the conditional expression in the if statement resolves to 0 or a FALSE value.
+          The else statement is an optional statement and there could be at most only one else statement following if.
+          </p>
+          <p>Syntax
+          The syntax of the if...else statement is</p>
+          <code>
+          if expression:
+             statement(s)
+          else:
+             statement(s)
+            </code>
+      <h4>The elif Statement</h4>
+    <p>The elif statement allows you to check multiple expressions for TRUE 
+            and execute a block of code as soon as one of the conditions evaluates to TRUE.
+            Similar to the else, the elif statement is optional. However, unlike else, 
+            for which there can be at most one statement, 
+            there can be an arbitrary number of elif statements following an if.</p>
+                                <code>
+                              syntax
+                              if expression1:
+                                statement(s)
+                              elif expression2:
+                                statement(s)
+                              elif expression3:
+                                statement(s)
+                              else:
+                                statement(s)
+                              </code>
+  
+        <code>if (condition) { statement_1; } else { statement_2; }</code>
+        condition can be any expression that evaluates to true or false. See
+        Boolean for an explanation of what evaluates to true and false. If
+        condition evaluates to true, statement_1 is executed; otherwise,
+        statement_2 is executed. statement_1 and statement_2 can be any statement,
+        including further nested if statements.
+        <p>
+          The 'if' condition statement is the most frequently used condition statement in python programming. 
+          The 'if' statement is used to evaluate whether a set of code needs to be executed or not.  
+          If the statement is true, the flow happens like executing a below code set; when false, 
+          then move into the next code set. Here the else's role 
+          if statement is to get reevaluated with a different set of conditions when the condition check fails.
+        </p>
+        <code
+          ># Python program to illustrate if-elif-else
+          # Variable Declaration section
+          check_variable = 20
+          # Program logic section
+          if  (check_variable == 2):
+          print ("check_variable is 2")
+          elif (check_variable == 4):
+          print ("check_variable is 4")
+          elif (check_variable == 6):
+          print ("check_variable is 6")
+          elif (check_variable == 8):
+          print ("check_variable is 8")
+          elif (check_variable == 10):
+          print ("check_variable is 10")
+          elif (check_variable == 12):
+          print ("check_variable is 12")
+          elif (check_variable == 14):
+          print ("check_variable is 14")
+          elif (check_variable == 16):
+          print ("check_variable is 16")
+          elif (check_variable == 18):
+          print ("check_variable is 18")
+          elif (check_variable == 20):
+          print ("check_variable is 20")
+          else:
+          print ("check_variable is not present")
+        </code>
+        <h4>OUTPUT</h4>
+        <code>
+            check_variable is 20
+        </code>
+        In the case of multiple conditions only the first logical condition which
+        evaluates to true will be executed. To execute multiple statements, group
+        them within a block statement ({ ... }) . In general, it's good practice
+        to always use block statements, especially when nesting if statements:
+  
+        
+      </article>
+    </section>
+    <section class="main-section" id="while_statement">
+      <header>while statement</header>
+      <article>
+        <p>The "while" statement in python is an important control flow statement that enables
+           repetitive execution of statements.</p>
+
+        <p>>Syntax of "while" statement in python:</p>
+        while <Conditional Expression>:
+         <code>   # While suit
+            Python statement1
+            Python statement2
+            Python statement3
+            .
+            .
+            .
+            Python statement n        
+        
+        else:
+        
+            # else suit
+            Python statement1
+            Python statement2
+            Python statement3
+            .
+            .
+            .
+            Python statement n    
+          </code>
+         
+        
+        
+                        
+        <h5>Semantics of "while" statement in python:</h5>
+        <ul>
+        <li>The "while" statement executes a suit of code as long as the conditional expression 
+          mentioned in the while statement evaluates to True.</li>
+        <li>The "while" statement terminates its execution when the conditional expression evaluates to False.</li>
+        <li>The "else" suit is executed once the while suit is exited</li>
+        <li>The "else" suit will not be executed if the "while" has exited as a result of a "break" statement.</li>
+        <li> "while" is the only loop control statement that can be controlled by a index variable used as part of its conditional expression.</li>
+        </ul>
+      
+        <p>Example:</p>
+        <code>
+        index = 0
+        while (index < 10):
+            print("Index Value: {}".format(index))
+            index = index + 1 #increment explicitly
+        else:
+            print("Done with printing numbers"
+          </code>
+        <h5>Output:</h5>
+        <Code>
+        Index Value: 0
+        
+        Index Value: 1
+        
+        Index Value: 2
+        
+        Index Value: 3
+        
+        Index Value: 4
+        
+        Index Value: 5
+        
+        Index Value: 6
+        
+        Index Value: 7
+        
+        Index Value: 8
+        
+        Index Value: 9
+    
+      Done with printing numbers
+    </Code>
+      </article>
+    </section>
+    <section class="main-section" id="Function_declarations">
+      <header>Function declarations</header>
+      <article>
+        <p>
+          A function is a block of organized, reusable code that is used to perform a single, related action. 
+          Functions provide better modularity for your application and a high degree of code reusing.
+        </p>
+         <p> As you already know, Python gives you many built-in functions like print(), etc. 
+            but you can also create your own functions. 
+            These functions are called user-defined functions.
+        </p>
+        <h4>
+          Defining a Function </h4>
+<p>You can define functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+<ul>
+<li>
+Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).
+</li>
+<li>Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.
+</li>
+<li>The first statement of a function can be an optional statement - the documentation string of the function or docstring.
+</li>
+<li>The code block within every function starts with a colon (:) and is indented.
+</li>
+<li>The statement return [expression] exits a function, optionally passing back an expression to the caller. 
+  A return statement with no arguments is the same as return None.
+</li>
+</ul> 
+<h5>Syntax</h5>
+<code>
+def functionname( parameters ):
+"function_docstring"
+function_suite
+return [expression]
+</code>
+<h5> Calling a Function </h5>
+<p>  Defining a function only gives it a name,
+specifies the parameters that are to be included in the function and structures the blocks of code.
+
+Once the basic structure of a function is finalized, 
+you can execute it by calling it from another function or directly from the Python prompt. 
+Following is the example to call printme() function 
+</p>
+<code>
+# Function definition is here
+def printme( str ):
+"This prints a passed string into this function"
+print str
+return;
+
+# Now you can call printme function
+printme("I'm first call to user defined function!")
+printme("Again second call to the same function")
+</code>
+<h5> Output </h5>
+       <code>
+        I'm first call to user defined function!
+        Again second call to the same function
+       </code>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <ul>
+          <li>
+            All the documentation in this page is taken from
+            <a
+              href="https://www.w3schools.com/python/"
+              target="_blank"
+              >w3schools</a
+            >
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
